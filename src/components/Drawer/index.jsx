@@ -168,7 +168,7 @@ export default function AppDrawer() {
                 style={BUTTON_STYLE}
               />
               <Tooltip
-                title="Informazioni sul progetto Wikimedia OSM Disability"
+                title="Informazioni sul progetto Percorsi Agili"
                 placement="right"
                 trigger={['hover', 'focus']}
               >
@@ -187,7 +187,7 @@ export default function AppDrawer() {
                   }
                   onClick={() => setShowInfo(true)}
                   style={BUTTON_STYLE}
-                  aria-label="Informazioni sul progetto Wikimedia OSM Disability"
+                  aria-label="Informazioni sul progetto Percorsi Agili"
                 >
                   {breakpoints[currentBreakpoint] > breakpoints.tablet &&
                     'Info'}

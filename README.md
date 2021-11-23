@@ -1,4 +1,4 @@
-# Wikimedia OSM disability Web App
+# Percorsi Agili
 
 # Install
 You need to install `NodeJS` and optionally `yarn`.
@@ -45,7 +45,7 @@ point API endpoints to actual production endpoints.
 This file could be modified without requiring a whole rebuild of the webapp.
 
 # Testing 
-The app can be accessed at the following url [https://wikimedia-osm-disability.web.app/](https://wikimedia-osm-disability.web.app/)
+The app can be accessed at the following url [https://barriere.wikimedia.it](https://barriere.wikimedia.it)
 
 # Data
 Data is automatically fetched via Overpass Turbo on install and build, queries that generate layers are `.ql` files inside the `overpass` directory.

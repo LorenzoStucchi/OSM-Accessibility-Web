@@ -1,5 +1,7 @@
-import { Button, Card, Drawer, Modal, notification, Tooltip } from 'antd';
-import React, { useState, useCallback } from 'react';
+import { Button, Card, Drawer, Modal, Tooltip } from 'antd';
+// import { Button, Card, Drawer, Modal, notification, Tooltip } from 'antd';
+import React, { useState } from 'react';
+// import React, { useState, useCallback } from 'react';
 import MapSearch from '../Search';
 import { useSelector } from 'react-redux';
 import { Media } from 'react-breakpoints';
@@ -10,7 +12,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MailOutlined } from '@ant-design/icons';
 import AddNote from '../AddNote';
 import { selectIsAddingNote } from '../../store/notes/selectors';
-import { faDonate, faInfo } from '@fortawesome/free-solid-svg-icons';
+import { faInfo } from '@fortawesome/free-solid-svg-icons';
+// import { faInfo, faDonate } from '@fortawesome/free-solid-svg-icons';
 import PositionToggler from './PositionToggler';
 import Tour from '../Tour';
 
@@ -23,40 +26,40 @@ export default function AppDrawer() {
 
   const [showNewsletter, setShowNewsletter] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
-  const [hasNotification, setHasNotification] = useState(false);
+  // const [hasNotification, setHasNotification] = useState(false);
 
   const isAddingNote = useSelector(selectIsAddingNote);
 
-  const openNotification = useCallback(() => {
-    if (hasNotification) {
-      return;
-    }
-    notification.info({
-      placement: 'bottomRight',
-      message: 'Sostieni Wikimedia Italia',
-      icon: false,
-      duration: null,
-      onClose: () => setHasNotification(false),
-      style: {
-        width: '350px'
-      },
-      description: (
-        <>
-          <p style={{ marginBottom: 0 }}>{window.DONATION_TEXT}</p>
-          <Button
-            href={window.PAYPAL_DONATION_URL}
-            target="_blank"
-            style={{ marginTop: '1rem' }}
-            type="primary"
-            id="donate"
-          >
-            Fai una donazione
-          </Button>
-        </>
-      )
-    });
-    setHasNotification(true);
-  }, [hasNotification]);
+  // const openNotification = useCallback(() => {
+  //   if (hasNotification) {
+  //     return;
+  //   }
+  //   notification.info({
+  //     placement: 'bottomRight',
+  //     message: 'Sostieni Wikimedia Italia',
+  //     icon: false,
+  //     duration: null,
+  //     onClose: () => setHasNotification(false),
+  //     style: {
+  //       width: '350px'
+  //     },
+  //     description: (
+  //       <>
+  //         <p style={{ marginBottom: 0 }}>{window.DONATION_TEXT}</p>
+  //         <Button
+  //           href={window.PAYPAL_DONATION_URL}
+  //           target="_blank"
+  //           style={{ marginTop: '1rem' }}
+  //           type="primary"
+  //           id="donate"
+  //         >
+  //           Fai una donazione
+  //         </Button>
+  //       </>
+  //     )
+  //   });
+  //   setHasNotification(true);
+  // }, [hasNotification]);
 
   return (
     <>
@@ -135,7 +138,7 @@ export default function AppDrawer() {
               <AddNote
                 showText={breakpoints[currentBreakpoint] > breakpoints.tablet}
               />
-              <Tooltip
+              {/* <Tooltip
                 title="Fai una donazione a Wikimedia Italia"
                 placement="right"
                 trigger={['hover', 'focus']}
@@ -161,7 +164,7 @@ export default function AppDrawer() {
                   {breakpoints[currentBreakpoint] > breakpoints.tablet &&
                     'Sostieni Wikimedia Italia'}
                 </Button>
-              </Tooltip>
+              </Tooltip> */}
               <Tour
                 breakpoints={breakpoints}
                 currentBreakpoint={currentBreakpoint}

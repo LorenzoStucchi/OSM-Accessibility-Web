@@ -256,12 +256,12 @@ window.STEPS = [
       'Vuoi ricevere notizie sulle nostre attività? Iscriviti alla newsletter di Wikimedia Italia',
     target: '#newsletter',
     hideCloseButton: true,
-  },
-  {
-    content:
-      'Vuoi contribuire allo sviluppo di altri progetti come questo? Fai una donazione a Wikimedia Italia',
-    target: '#donate',
-    hideCloseButton: true,
+  // },
+  // {
+  //   content:
+  //     'Vuoi contribuire allo sviluppo di altri progetti come questo? Fai una donazione a Wikimedia Italia',
+  //   target: '#donate',
+  //   hideCloseButton: true,
   }
 ];
 
